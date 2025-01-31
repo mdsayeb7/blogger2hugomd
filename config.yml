@@ -3,5 +3,5 @@ languageCode: en-us
 title: My New Hugo Site
 theme: PaperMod
 
-[minify]
+minify:
   disableFingerprinting = true
