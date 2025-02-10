@@ -6,7 +6,7 @@ if showing error Install the `xml2js` Module:
 npm install xml2js
 ```
 
-Usage: `node index.js b|w <BLOGGER BACKUP XML> <OUTPUT DIR>`
+Usage: `node script.js <BLOGGER BACKUP XML> <OUTPUT DIR>`
 
 example 
 ```
