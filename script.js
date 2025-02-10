@@ -106,7 +106,7 @@ async function bloggerImport(backupXmlFile, outputDir) {
             await writeToFile(fname, `${fileHeader}\n\n${markdown}`);
         }
 
-        writeSummary(outputDir);
+        writeSummary();  // Save summary outside of output directory
     } catch (err) {
         console.error('Error processing Blogger export:', err);
         process.exit(1);
@@ -123,14 +123,14 @@ async function writeToFile(filename, content) {
     }
 }
 
-// Write summary report
-function writeSummary(outputDir) {
+// Write summary report outside of output directory
+function writeSummary() {
     const summary = {
         totalPosts: stats.posts.length
     };
 
     fs.writeFileSync(
-        path.join(outputDir, 'migration-summary.json'),
+        path.join(__dirname, 'migration-summary.json'),  // Save in main folder
         JSON.stringify(summary, null, 2)
     );
 }
