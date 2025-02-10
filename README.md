@@ -1,14 +1,13 @@
 Idea https://github.com/palaniraja/blog2md
 
-if showing error Install the `xml2js` Module:
-
+First, run this command
 ```
-npm install xml2js
+npm install xml2js sanitize-filename turndown
 ```
 
 Usage: `node script.js <BLOGGER BACKUP XML> <OUTPUT DIR>`
 
 example 
 ```
-node script.js blog-02-09-2025.xml output
+node script.js blog-02-10-2025.xml output
 ```
