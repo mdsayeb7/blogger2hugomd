@@ -11,3 +11,4 @@ example
 ```
 node script.js blog-02-10-2025.xml output
 ```
+It supports YAML(---); it may not be supported if you use TOML(+++).
